@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+@import "button.css";
+@import "card.css";
+@import "navMenuDesktop.css";
+@import "navMenuMobile.css";
+@import "typo.css";
+@import "responsive.css";
+@import "onboard.css";
+@import "common.css";
+@import "cart.css";
+@import "info.css";
+
+
+body{
+     background-color: #ffffff;
+     text-align: center;
+}
+
+.contenedor-productos{
+     display: inline-block;
+     position: relative;
+     align-content: center;
+     padding: 10px;
+     margin: 2rem;
+     margin-top: 90px;
+ }
+
+ .contenedor-compras{
+     display: flex;
+ }
+
+
+ .table-head{
+     border-top-right-radius: 2rem;
+     border-top-left-radius: 2rem;
+     background-color: #04494d;
+     color: aliceblue;
+     font-size: large;
+ }
+
+.table-body{
+    color: #ffffff;
+}
+ 

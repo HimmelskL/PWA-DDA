@@ -1,0 +1,73 @@
+.nav-login{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sideNavOpen {
+    height: 100%;
+    width: 240px;
+    margin-top: 55px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    overflow-x: hidden;
+    font-size: 16px;
+    padding-top: 40px;
+    transition: 0.1s;
+    background-color: #03a1a8;
+    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
+    color: azure;
+}
+
+.sideNavClose {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    font-size: 20px;
+    right: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    transition: 0.1s;
+    background-color: #161616;
+    box-shadow: 0 0 8px 0 rgba(57, 78, 234, 0.1);
+}
+
+.ContentOverlayOpen {
+    display: block;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 7;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.ContentOverlayClose {
+    display: none;
+}
+
+.sidebar-nav {
+    position: relative;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-indent: 20px;
+    line-height: 40px;
+    display: block;
+    color: #fff;
+    margin-right: -250px;
+    overflow-y: auto;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: #fff;
+}
