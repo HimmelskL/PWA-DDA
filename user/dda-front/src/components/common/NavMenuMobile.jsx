@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Container, Row, Col, Button} from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import Logo from '../../assets/images/DDA-72x72.png';
 
 
@@ -12,9 +12,33 @@ class NavMenuMobile extends Component {
           super();
           this.state = {
                SideNavState: "sideNavClose",
-               ContentOverState: "ContentOverlayClose"
+               ContentOverState: "ContentOverlayClose",
+               Searchkey:"",
+               SearchRedirectStauts:false
+          }
+          this.SearchOnChange = this.SearchOnChange.bind(this);
+          this.SeachOnClick = this.SeachOnClick.bind(this);
+          this.searchRedirect = this.searchRedirect.bind(this);
+     }
+
+     SearchOnChange(event){
+          let Searchkey = event.target.value;
+          // alert(Searchkey);
+          this.setState({Searchkey:Searchkey});
+     }
+
+     SeachOnClick(){
+          if(this.state.Searchkey.length>=2){
+               this.setState({SearchRedirectStauts:true})
           }
      }
+
+     searchRedirect(){
+          if(this.state.SearchRedirectStauts===true){
+               return <Redirect to={"/productbysearch/"+this.state.Searchkey} />
+          }
+     }
+
 
      MenuBarClickHandler = () => {
           this.SideNavOpenClose();
@@ -55,8 +79,8 @@ class NavMenuMobile extends Component {
 
                                    <Col className='p-1 mt-1' lg={4} md={4} sm={12} xs={12}>
                                         <div className='input-group w-100'>
-                                             <input type="text" className='form-control'></input>
-                                             <Button type='button' className='btn site-btn'><i className='fa fa-search'></i></Button>
+                                             <input onChange={this.SearchOnChange}  type="text" className='form-control'></input>
+                                             <Button onClick={this.SeachOnClick} type='button' className='btn site-btn'><i className='fa fa-search'></i></Button>
                                         </div>
                                    </Col>
 
@@ -67,6 +91,7 @@ class NavMenuMobile extends Component {
                                    </Col>
 
                               </Row>
+                              {this.searchRedirect()}
                          </Container>
 
                          <div className={this.state.SideNavState} id="menu">

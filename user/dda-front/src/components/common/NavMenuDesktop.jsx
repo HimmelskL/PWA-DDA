@@ -1,18 +1,14 @@
 import React, { Component, Fragment, useState } from 'react';
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
-import NavbarOffcanvas from 'react-bootstrap/esm/NavbarOffcanvas';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Logo from '../../assets/images/DDA-72x72.png';
 import NavMenuMobile from './NavMenuMobile';
 
 
 
 class NavMenuDesktop extends Component {
-
      render() {
-
           return (
                <Fragment>
                     <div className='TopSectionDown'>
@@ -38,6 +34,7 @@ class NavMenuDesktop extends Component {
                                         </Col>
 
                                    </Row>
+                                 
                               </Container>
                               
                          </Navbar>

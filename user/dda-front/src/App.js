@@ -5,7 +5,7 @@ import PropagateLoader from 'react-spinners/PropagateLoader';
 
 function App() {
 
-  const container = document.querySelector(".container");
+ /*  const container = document.querySelector(".container");
 
   const anahuacpics = [
     {name: "logo", Image: "/assets/images/DDA-72x72.png"},
@@ -49,10 +49,10 @@ function App() {
         setLoading(false)
       }, 8000)
     }, [])
-
+ */
     return (
       <div className='App'>
-        {
+        {/* {
           loading ? (
             <PropagateLoader
             size={30}
@@ -62,12 +62,12 @@ function App() {
           )
           
           :
-            (
-              <BrowserRouter>
-            <AppRoute/>
-        </BrowserRouter>
-            )
-        }
+            ( */}
+             <BrowserRouter>
+             <AppRoute/>
+         </BrowserRouter>
+            {/* )
+        } */}
       </div>
         
     )

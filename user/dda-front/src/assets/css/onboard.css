@@ -17,3 +17,11 @@
     object-fit: cover;
     margin-top: 50px;
 }
+
+.forgotPassword{
+    color: grey;
+}
+
+.newPassword{
+    color: #04494d;
+}

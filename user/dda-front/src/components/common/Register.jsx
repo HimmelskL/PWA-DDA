@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import NavMenuMobile from './NavMenuMobile';
 import RegisterPic from '../../assets/images/register-pic.png';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
 
@@ -25,9 +26,13 @@ class Register extends Component {
                                                   <h4 className='section-title-login'>REGISTRO DE USUARIO</h4>
                                                   <br></br>
                                                   <input className='form-control m-2' type="text" placeholder='Nombre'></input>
-                                                  <input className='form-control m-2' type="text" placeholder='Usuario'></input>
-                                                  <input className='form-control m-2' type="text" placeholder='Contraseña'></input>
+                                                  <input className='form-control m-2' type="email" placeholder='Email'></input>
+                                                  <input className='form-control m-2' type="password" placeholder='Contraseña'></input>
+                                                  <input className='form-control m-2' type="password" placeholder='Confirma la contraseña'></input>
                                                   <Button className='btn btn-block m-2 site-btn-login'>Registrarme</Button>
+                                                  <br /><br />
+                                                  <p className='forgotPassword'>¿Olvidaste la contraseña? <Link className='newPassword' to="/forget">
+                                                       Recuperar mi contraseña</Link></p>
                                              </Form>
                                         </Col>
                                    </Row>
