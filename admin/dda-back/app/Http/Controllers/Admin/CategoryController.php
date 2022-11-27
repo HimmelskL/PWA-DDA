@@ -63,5 +63,67 @@ class CategoryController extends Controller
   
       }// End Mehtod 
 
+      public function EditCategory($id){
 
+        $category = Category::findOrFail($id);
+        return view('backend.category.category_edit',compact('category'));
+
+    } //End Method 
+
+
+     public function UpdateCategory(Request $request){
+        $category_id = $request->id;
+
+        if ($request->file('category_image')) {
+
+        $image = $request->file('category_image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(128,128)->save('upload/category/'.$name_gen);
+        $save_url = 'http://127.0.0.1:8000/upload/category/'.$name_gen;
+
+        Category::findOrFail($category_id)->update([
+            'category_name' => $request->category_name,
+            'category_image' => $save_url,
+        ]);
+
+        $notification = array(
+            'message' => 'Category Update With Image Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.category')->with($notification);
+
+        }
+        else{
+
+             Category::findOrFail($category_id)->update([
+            'category_name' => $request->category_name,
+
+        ]);
+
+        $notification = array(
+            'message' => 'Category Updateed Without Image Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.category')->with($notification);
+
+    } //End Method 
+
+     }
+
+     public function DeleteCategory($id){
+
+        Category::findOrFail($id)->delete();
+    
+        $notification = array(
+                'message' => 'Category Deleted Successfully',
+                'alert-type' => 'success'
+            );
+    
+            return redirect()->back()->with($notification);
+    
+    
+    
+        }//End Method 
 }
