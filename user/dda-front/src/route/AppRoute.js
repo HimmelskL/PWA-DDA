@@ -11,6 +11,7 @@ import ResetPasswordPage from '../pages/ResetPasswordPage';
 import ProfilePage from '../pages/ProfilePage';
 import ProductCategoryPage from '../pages/ProductCategoryPage';
 import SearchPage from '../pages/SearchPage';
+import HomeTopMobile from '../components/home/HomeTopMobile';
 
 
 class AppRoute extends Component {
@@ -27,6 +28,7 @@ class AppRoute extends Component {
                          <Route exact path="/profile" render={(props) => <ProfilePage {...props} key={Date.now()} /> } />
 
                          <Route exact path='/category' component={Categories} />
+                         <Route exact path='/product' component={HomeTopMobile} />
                          <Route exact path='/cart' component={CartPage} />
                          <Route exact path='/info' component={Info} />
                          <Route exact path='/productcategory/:category' component={ProductCategoryPage} />
