@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { Fragment } from 'react'
+import { Fragment } from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import Login from '../../assets/images/login.png';
+import { Link } from 'react-router-dom';
 
 class Profile extends Component {
      render() {

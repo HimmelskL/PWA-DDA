@@ -10,8 +10,8 @@ class Category extends Component {
     const Category = this.props.Category;
     const MyView = MyList.map((ProductList, i) => {
 
-      return <Col className="p-0" xl={2} lg={2} md={2} sm={6} xs={6}>
-        <Link to={"/productdetails/" + ProductList.id}>
+      return <Col className="col-category" xl={2} lg={2} md={2} sm={6} xs={6}>
+        {/* <Link to={"/productdetails/" + ProductList.id}> */}
           <Card className="h-100 w-100 text-center">
             <Card.Body>
               <h5 className='category-name'> {ProductList.code} {ProductList.product} </h5>
@@ -43,7 +43,7 @@ class Category extends Component {
             </Card.Body>
           </Card>
 
-        </Link>
+        {/* </Link> */}
       </Col >
 
     });
