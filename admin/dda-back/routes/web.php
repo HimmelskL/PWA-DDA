@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\CategoryController; 
+use App\Http\Controllers\Admin\ProductListController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,19 @@ Route::post('/update',[CategoryController::class, 'UpdateCategory'])->name('cate
 Route::get('/delete/{id}',[CategoryController::class, 'DeleteCategory'])->name('category.delete');
     
     });
+
+
+    Route::prefix('product')->group(function(){
+
+        Route::get('/all',[ProductListController::class, 'GetAllProduct'])->name('all.product');
+        
+        Route::get('/add',[ProductListController::class, 'AddProduct'])->name('add.product');
+        
+        Route::post('/store',[ProductListController::class, 'StoreProduct'])->name('product.store');
+        
+        Route::get('/edit/{id}',[ProductListController::class, 'EditProduct'])->name('product.edit');
+        
+        Route::post('/update',[ProductListController::class, 'UpdateProduct'])->name('product.update');
+        
+        Route::get('/delete/{id}',[ProductListController::class, 'DeleteProduct'])->name('product.delete');
+        });
