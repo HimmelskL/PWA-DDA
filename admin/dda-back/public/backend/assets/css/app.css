@@ -11,7 +11,7 @@ body {
 	font-size: 14px;
 	color: #4c5258;
 	letter-spacing: .5px;
-	background-color: #f4f4f4;
+	background-color: #191c29;
 	overflow-x: hidden;
 	font-family: Roboto, sans-serif
 }
@@ -32,7 +32,7 @@ a {
 	top: 0;
 	bottom: 0;
 	left: 0;
-	background: #fff;
+	background: #191c29;
 	border-right: 0 solid #e4e4e4;
 	z-index: 11;
 	box-shadow: 0 .3rem .8rem rgba(0, 0, 0, .12)!important;
@@ -49,7 +49,7 @@ a {
 	bottom: 0;
 	padding: 0 15px;
 	z-index: 5;
-	background: #fff;
+	background: #03a1a8;
 	background-clip: padding-box;
 	border-bottom: 1px solid #e4e4e4
 }
@@ -59,17 +59,17 @@ a {
 }
 
 .logo-text {
-	font-size: 22px;
+	font-size: 17px;
 	margin-left: 10px;
 	margin-bottom: 0;
 	letter-spacing: 1px;
-	color: #0d6efd
+	color: #fafafa
 }
 
 .toggle-icon {
 	font-size: 22px;
 	cursor: pointer;
-	color: #0d6efd
+	color: #fafafa
 }
 
 .topbar {
@@ -78,7 +78,7 @@ a {
 	left: 250px;
 	right: 0;
 	height: 60px;
-	background: #fff;
+	background: #03a1a8;
 	border-bottom: 1px solid rgb(228 228 228 / 0%);
 	z-index: 10;
 	box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important
@@ -103,7 +103,7 @@ a {
 }
 
 .page-footer {
-	background: #fff;
+	background: #03a1a8;
 	left: 250px;
 	right: 0;
 	bottom: 0;
@@ -111,7 +111,7 @@ a {
 	text-align: center;
 	padding: 7px;
 	font-size: 14px;
-	border-top: 1px solid #e4e4e4;
+	border-top: 1px solid #191c29;
 	z-index: 3
 }
 
@@ -207,7 +207,7 @@ a {
 
 .sidebar-wrapper .metismenu ul {
 	border: 1px solid #ededed;
-	background: #fff
+	background: #191c29;
 }
 
 .sidebar-wrapper .metismenu ul ul a {
@@ -2412,3 +2412,4 @@ input.search-control-2::placeholder {
 		display: none
 	}
 }
+
